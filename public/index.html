@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting DApp</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+  <h1>Blockchain Voting DApp</h1>
+  <div>
+    <button id="connectWallet">Connect Wallet</button>
+    <p id="status"></p>
+  </div>
+
+  <!-- Add Candidate Form (visible to admin only) -->
+  <div id="adminPanel" style="display:none;">
+    <h3>Add Candidate</h3>
+    <form id="addCandidateForm">
+      <label for="candidateName">Candidate Name:</label>
+      <input type="text" id="candidateName" required>
+      <button type="submit">Add Candidate</button>
+    </form>
+  </div>
+
+  <!-- Candidate Voting Form -->
+  <form id="votingForm">
+    <label for="candidate">Enter Candidate ID:</label>
+    <input type="text" id="candidateId" required>
+    <button type="submit">Vote</button>
+  </form>
+
+  <div>
+    <button id="viewCandidates">View Candidates</button>
+    <button id="viewAdmin">View Admin Address</button>
+    <button id="checkVotingStatus">Check Voting Status</button>
+  </div>
+
+  <div id="results" style="margin-top: 20px;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js"></script> <!-- Link to JS file -->
+</body>
+</html>
